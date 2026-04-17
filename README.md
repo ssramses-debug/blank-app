@@ -1,19 +1,24 @@
-# 🎈 Blank app template
+# Dashboard de Cobertura Nacional
 
-A simple Streamlit app template for you to modify!
+Este repositorio incluye dos formas de ejecutar la aplicacion:
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+1. Version web con Streamlit (`streamlit_app.py`).
+2. App Android instalable en `android_app/` (APK debug).
 
-### How to run it on your own machine
+## Ejecutar la version web
 
-1. Install the requirements
+1. Instala dependencias:
+   - `pip install -r requirements.txt`
+2. Inicia Streamlit:
+   - `streamlit run streamlit_app.py`
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## Compilar APK Android
 
-2. Run the app
+Desde la carpeta `android_app/`:
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+1. Configura un Android SDK local (si no existe `local.properties`):
+   - `echo "sdk.dir=/ruta/a/tu/android-sdk" > local.properties`
+2. Compila APK debug:
+   - `./gradlew assembleDebug`
+3. APK generado en:
+   - `android_app/app/build/outputs/apk/debug/app-debug.apk`
